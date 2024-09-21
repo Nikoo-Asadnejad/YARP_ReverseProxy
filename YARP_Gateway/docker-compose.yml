@@ -1,0 +1,32 @@
+﻿version: '3.8'
+
+services:
+  reverse-proxy:
+    build: .
+    ports:
+      - "8080:80"   # Maps port 80 of the container to port 8080 on the host
+    depends_on:
+      - api_1
+      - api_1
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - backend-network
+
+  api_1:
+    image: api_1
+    ports:
+      - "5001:80"
+    networks:
+      - backend-network
+
+  api_2:
+    image: api_2
+    ports:
+      - "5002:80"
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge
