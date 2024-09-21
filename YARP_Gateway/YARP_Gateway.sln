@@ -4,6 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YARP_Gateway", "YARP_Gatewa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DC7636F-2E4F-47D9-A1CD-DB48C8C2F88C}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
